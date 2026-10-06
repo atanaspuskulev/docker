@@ -1,11 +1,11 @@
 # A simple multi-stage docker build
 
 This is very basic docker-only multi-stage build app;
-No compose, no docker-compose.yml. You can run it with or without network created
+No compose, no docker-compose.yml.
 
-If you want create a network, you can do so with:
+First, create your network:
 
-```docker create network [my-network-name]```
+```docker network create [my-network-name]```
 
 ### Building stages
 

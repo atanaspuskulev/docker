@@ -1,5 +1,5 @@
 #--------------- Build stage ---------------
-FROM php:8.4-fpm-alpine AS builder
+FROM php:8.4-fpm-alpine AS source
 
 WORKDIR /var/www/html
 
@@ -12,7 +12,7 @@ FROM php:8.4-fpm-alpine AS php-runtime
 RUN addgroup -S app && adduser -S -G app app
 WORKDIR /var/www/html
 
-COPY --from=builder --chown=app:app \
+COPY --from=source --chown=app:app \
     /var/www/html \
     /var/www/html
 
