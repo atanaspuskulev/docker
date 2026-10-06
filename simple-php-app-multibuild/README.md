@@ -20,7 +20,8 @@ First, create your network:
 
 ```
 docker run --network [my-network-name] --name php-fpm php-image:1
-docker run --network [my-network-name] -p 80:80 --name nginx nginx-image:1 ```
+docker run --network [my-network-name] -p 80:80 --name nginx nginx-image:1
+```
 
 You can access it via http://localhost (port 80 exposed and served).
 
