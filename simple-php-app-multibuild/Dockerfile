@@ -31,7 +31,7 @@ FROM nginx:stable-alpine-slim AS nginx
 COPY files/config/nginx.conf \
     /etc/nginx/conf.d/default.conf
 
-COPY --from=builder \
+COPY --from=source \
     /var/www/html \
     /var/www/html
 
